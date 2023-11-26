@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <h4>Quản lý tuyển sinh</h4>
+    <div>
+      <input
+        type="text"
+        id="admissionScore"
+        class="form-control"
+        placeholder="Điểm chuẩn"
+      />
+      <input
+        type="text"
+        id="firstScore"
+        class="form-control"
+        placeholder="Điểm môn thứ 1"
+      />
+      <input
+        type="text"
+        id="secondScore"
+        class="form-control"
+        placeholder="Điểm môn thứ 2"
+      />
+      <input
+        type="text"
+        id="thirdScore"
+        class="form-control"
+        placeholder="Điểm môn thứ 3"
+      />
+      <input
+        type="text"
+        id="priorArea"
+        class="form-control"
+        placeholder="Chọn khu vực: A, B, hoặc C"
+      />
+      <input
+        type="text"
+        id="priorCandidate"
+        class="form-control"
+        placeholder="Chọn đối tượng: 1, 2, hoặc 3"
+      />
+      <div class="alert alert-success mt-3">
+        <button class="btn btn-primary" onClick="calcTotalScore()">
+          Kết quả
+        </button>
+        <h6>Kết quả: <span id="admissionResult"></span></h6>
+      </div>
+    </div>
+
+    <div>
+      <h4>Tính tiền điện</h4>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        placeholder="Nhập họ tên"
+      />
+      <input
+        type="text"
+        id="kwNumber"
+        class="form-control"
+        placeholder="Nhập số kw"
+      />
+      <div class="alert alert-success mt-3">
+        <button class="btn btn-primary" onClick="calcComsume()">
+          Tính tiền điện
+        </button>
+        <h6>Kết quả: <span class="p-3" id="electricBill"></span></h6>
+      </div>
+    </div>
+
+    <div>
+      <h4>Tính tiền thuế</h4>
+      <input
+        type="number"
+        id="totalSalary"
+        class="form-control"
+        placeholder="Tổng thu nhập (VND)"
+      />
+      <input
+        type="number"
+        id="dependPeople"
+        class="form-control"
+        placeholder="Số người phụ thuộc"
+      />
+      <div class="alert alert-success mt-3">
+        <button class="btn btn-primary" onclick="calcTax()">Tính thuế</button>
+        <h6>Kết quả: <span class="p-3" id="taxResult"></span></h6>
+      </div>
+    </div>
+
+    <div>
+      <select class="form-control" id="customerType">
+        <option value="Household">Nhà dân</option>
+        <option value="Bussiness">Doanh nghiệp</option>
+      </select>
+      <input class="form-control" type="number" id="connectionNumber" placeholder="Số lượng kết nối">
+      <input class="form-control" type="number" id="channelNumber" placeholder="Số kênh cao cấp">
+      <div class="alert alert-success mt-3">
+        <button class="btn btn-primary" onclick="exportCableReceipt()">Tính tiền cáp</button>
+        <h6>Kết quả: <span class="p-3" id="cableReceiptResult"></span></h6>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

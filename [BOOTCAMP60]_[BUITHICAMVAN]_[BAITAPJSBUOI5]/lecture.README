@@ -1,0 +1,40 @@
+- Syntax for calling a function:
+    funtion funt_name (parameters){
+    }
+
+
+- Method of calling a function:
+1. Assign const value inside the funtion
+function calcSum() {
+    var a = 5;
+    var b = 3;
+    var sum = a + b;
+}
+calcSum(); => 8
+
+2. Assign value my calling a function / outside a function 
+function calcSum(a, b) {
+    var sum = a + b;
+}
+calcSum(5, 6); => 11
+
+3. Function by return
+function calcSum(a, b) {
+    var sum = a + b;
+    return sum;
+}
+var res1 = calcSum(5, 6) => 11
+
+
+- Scope: phạm vi sử dụng của biến
+1. Global scope (biến toàn cục)
+2. Function scope (biến cục bộ): biến tạo funct nào chỉ được hiểu ở trong funct đó
+
+- Parameters: param when define a function
+- Arguments (đối số): value pass in the function
+
+
+- Function Literal: use an expression with =, no function name required
+Ex: 
+var variableName =  function 
+
